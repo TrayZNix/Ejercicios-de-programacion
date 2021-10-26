@@ -5,7 +5,7 @@ import ejemplolectura.leer;
 public class Principal {
 
 	public static void main(String[] args) {
-		int tam=4, dos=2, num=0;
+		int tam=4;
 		
 		int [] edades=new int [tam];
 			for (int i=0;i<edades.length;i++) {
