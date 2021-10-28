@@ -5,15 +5,15 @@ import java.util.Random;
 public class Principal {
 
 	public static void main(String[] args) {
-		int nota=0, hasta=10, desde=0, UNO=1, ciclo=6, numAsig=6, suspensas=0;
+		int nota=0, hasta=10, desde=0, CERO=0, UNO=1, ciclo=6, numAsig=6, suspensas=0;
 		double media=0;
-		String PRG="Programación", ED="Entornos de desarrollo", FOL="Formación y orientación laboral", BBDD="Bases de datos";
-		String LGM="Lenguajes de marca y sistemas de gestión de información", SI="Sistemas informáticos", alum="Roberto Carvajal";
+		String PRG="Programaciï¿½n", ED="Entornos de desarrollo", FOL="Formaciï¿½n y orientaciï¿½n laboral", BBDD="Bases de datos";
+		String LGM="Lenguajes de marca y sistemas de gestiï¿½n de informaciï¿½n", SI="Sistemas informï¿½ticos", alum="Roberto Carvajal";
 		System.out.printf("|---------------------------------------------------------------|\n");
 		System.out.printf("|Alumno:%s\t\t\t\t\t|\n", alum);
 		System.out.printf("|---------------------------------------------------------------|\n");
 		System.out.printf("|\t\t\t\t\t\t\t\t|\n");
-			while (ciclo>=0) {
+			while (ciclo>=CERO) {
 				Random num= new Random (System.nanoTime());
 				nota=num.nextInt(hasta-desde+UNO);
 				switch (ciclo) {

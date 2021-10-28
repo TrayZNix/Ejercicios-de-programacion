@@ -6,24 +6,24 @@ public class Principal {
 
 	public static void main(String[] args) {
 		//DECLARAMOS LAS VARIABLES
-		int numero=0;
-		char cont=0;
+		int numero=0, DOS=2, CERO=0;
 		//IMPONEMOS LAS CONDICIONES PARA SABER SI ES PAR O IMPAR, 
 		//Y UN BUCLE PARA PODER REPETIR UN ANALISIS SIN REINICIAR EL PROGRAMA
 		do {
-			System.out.println("Introduce el número a analizar");
+			System.out.println("Introduce el nÃºmero a analizar o escriba 0 para salir del programa");
 			numero=Leer.datoInt();
-		
-			if (numero%2==0) {
-				System.out.printf("Este número (%d) es par", numero);
+			if (numero==CERO) {
+				break;
+			}
+			if (numero%DOS==CERO) {
+				System.out.printf("\nEste nÃºmero (%d) es par\n", numero);
 			}
 			else {
-				System.out.printf("Este número (%d) es impar\n\n", numero);
+				System.out.printf("\nEste nÃºmero (%d) es impar\n\n", numero);
 			}
 			
-			System.out.println("¿Quiere continuar comprobando números? (S/N)");
-			cont=Leer.datoChar();
-		} while (cont==83);
+			
+		} while (numero!=CERO);
 		
 		//DESPEDIDA
 		System.out.println("Muchas gracias por usar este programa!");

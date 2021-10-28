@@ -5,13 +5,13 @@ import lectura.Leer;
 public class Principal {
 
 	public static void main(String[] args) {
-		int selector=0, numEntradas=0, redo=0;
+		int selector=0, numEntradas=0, redo=0, CERO=0, UNO=1, DOS=2, TRES=3, CUATRO=4, CINCO=5;
 		double precPA=4.2, precPB=3.9, precPC=4.3, precPD=4.17, total=0;
 		String pelA="Frozen", pelB="Solo en casa 2", pelC="Spiderman", pelD="Armagedon";
 		String salA="Sala infantil", salB="Sala joven", salC="Sala VIP", salD="Sala 3D";
 		
 		//Selector	
-		System.out.printf("Para hoy, estan programadas las siguientes pelÌculas:\n");
+		System.out.printf("Para hoy, estan programadas las siguientes pel√çculas:\n");
 		
 		System.out.printf("|-------------------------------|\n");
 		System.out.printf("|1.\t%s\t\t\t|\n", pelA);
@@ -21,54 +21,54 @@ public class Principal {
 		System.out.printf("|5.\tSalir del Programa\t|\n");
 		System.out.printf("|-------------------------------|\n");
 				
-		System.out.printf("øQuÈ pelicula desea ver? (1-4): ");
+		System.out.printf("¬øQu√© pelicula desea ver? (1-4): ");
 		do {
 			selector=Leer.datoInt();
 			switch (selector) {
 						
 				case 1:
-					System.out.printf("\nPrecio por entrada: %.2fÄ",precPA);
+					System.out.printf("\nPrecio por entrada: %.2f‚Ç¨",precPA);
 					System.out.printf("\nEn: %s", salA);
-					selector=1;
-					redo=0;
+					selector=UNO;
+					redo=CERO;
 					break;
 				
 				case 2:
-					System.out.printf("\nPrecio por entrada: %.2fÄ",precPB);
+					System.out.printf("\nPrecio por entrada: %.2f‚Ç¨",precPB);
 					System.out.printf("\nEn: %s", salB);
-					selector=2;
-					redo=0;
+					selector=DOS;
+					redo=CERO;
 					break;
 				
 				case 3:
-					System.out.printf("\nPrecio por entrada: %.2fÄ",precPC);
+					System.out.printf("\nPrecio por entrada: %.2f‚Ç¨",precPC);
 					System.out.printf("\nEn: %s", salC);
-					selector=3;
-					redo=0;
+					selector=TRES;
+					redo=CERO;
 					break;
 				
 				case 4:
-					System.out.printf("\nPrecio por entrada: %.2fÄ",precPD);
+					System.out.printf("\nPrecio por entrada: %.2f‚Ç¨",precPD);
 					System.out.printf("\nEn: %s", salD);
-					selector=4;
-					redo=0;
+					selector=CUATRO;
+					redo=CERO;
 					break;
 				case 5:
 					System.out.printf("Gracias por usar el programa. Hasta la proxima!");
-					redo=0;
+					redo=CERO;
 					break;
 					
 				default:
-					System.out.println("Entrada incorrecta, repita la selecciÛn, o teclee 5 para salir");
-					redo=1;
+					System.out.println("Entrada incorrecta, repita la selecci√ìn, o teclee 5 para salir");
+					redo=UNO;
 					break;
 			}
-		}while (redo==1);
+		}while (redo==UNO);
 	
 	
 		
-		if (selector<5) {
-			System.out.printf("\nøCuantas entradas quiere?\n");
+		if (selector<CINCO) {
+			System.out.printf("\n¬øCuantas entradas quiere?\n");
 			numEntradas=Leer.datoInt();
 			switch (selector) {
 				case 1:
@@ -84,7 +84,7 @@ public class Principal {
 					total=numEntradas*precPD;
 					break;
 			}
-		System.out.printf("\nPerfecto!\nEn total serÌan %.2fÄ", total);
+		System.out.printf("\nPerfecto!\nEn total ser√≠an %.2f‚Ç¨", total);
 		System.out.println("\nMuchas gracias por su compra!");
 		}
 	}

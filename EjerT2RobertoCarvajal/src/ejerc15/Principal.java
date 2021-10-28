@@ -5,34 +5,36 @@ import lectura.Leer;
 public class Principal {
 
 	public static void main(String[] args) {
+		int selector=0, exit=0, UNO=1, CERO=0;
+		double saldo=5600.35;
+		String opcionA="1. Ver saldo", opcionB="2. Retirar dinero", opcionC="3. Ingresar dinero", opcionD="4. Comprar entradas";
+		System.out.println("Bienvenido. Este programÃ¡ funcionarÃ¡ igual que la interfaz de un cajero automÃ¡tico");
+		do {
+		System.out.printf("|-----------------------------------------------|\n");
+		System.out.printf("|Â¿QuÃ© desea hacer?\t\t\t\t|\n");
+		System.out.printf("|%s\t\t\t\t\t|\n", opcionA);
+		System.out.printf("|%s\t\t\t\t|\n", opcionB);
+		System.out.printf("|%s\t\t\t\t|\n", opcionC);
+		System.out.printf("|%s\t\t\t\t|\n", opcionD);
+		System.out.printf("|-----------------------------------------------|\n");
 		
-		int horasTrabajadas=0, horasObligatorias=40, horasExtra=0, perm=1;
-		double salarioNormal=16, salarioExtra=20, salarioFinal=0;
-		
-		System.out.println("Bienvenido. Este programa la ayudará a calcular su salario según el número de horas trabajadas.");
-		do{
-		System.out.println("\nIntroduzca el número de horas trabajadas, o 0 para salir del programa");
-		horasTrabajadas=Leer.datoInt();
-		perm=horasTrabajadas;
-		switch (perm) {
-		default:
-		if(horasTrabajadas<=horasObligatorias) {
-			salarioFinal=horasTrabajadas*salarioNormal;
-			System.out.printf("Habiendo trabajado %d horas, sabiendo que sus horas se cotizan a %.2f€ cada una,"
-					+ " su salario total es %.2f€", horasTrabajadas, salarioNormal, salarioFinal);
-		}
-		if(horasTrabajadas>horasObligatorias) {
-			horasExtra=horasTrabajadas-horasObligatorias;
-			salarioFinal=horasObligatorias*salarioNormal+horasExtra*salarioExtra;
-			System.out.printf("Ha realizado un total de %d horas extras. Sumado al precio total de sus horas %d obligatorias "
-					+ "su salario total es %.2f€.\n", horasExtra, horasObligatorias, salarioFinal);
-			}
-		break;
-		case 0:
-			break;
-		}
-		}while(perm>0);
-	System.out.println("\nGracias por usar este programa!");
+		selector=Leer.datoInt();
+		switch (selector) {
+			case 1:
+				System.out.printf("\n\n|-----------------------------------------------|\n");
+				System.out.printf("|Su saldo actual es %.2fâ‚¬\t\t\t|\n",saldo);
+				System.out.printf("|\t\t\t\t\t\t|\n");
+				System.out.printf("|-----------------------------------------------|\n\n");
+				break;
 	
-	}	
+			default:
+				break;
+			}
+		}while(exit==CERO);
+		System.out.printf("|-----------------------------------------------|\n");
+		System.out.printf("|\t\t\t\t\t\t|\n");
+		
+
+	}
+
 }

@@ -5,20 +5,21 @@ import lectura.Leer;
 public class Principal {
 
 	public static void main(String[] args) {
-		int numA=0, numB=0, result=0, max=0, ret=0;
-		System.out.printf("Este programa calculará la tabla de multiplicar hasta un número, del digito que desees. \n");
+		int numA=0, numB=0, result=0, max=0, ret=1, CERO=0, UNO=1;
+		System.out.printf("Este programa calcularÃ¡ la tabla de multiplicar hasta un nÃºmero, del digito que desees. \n");
+		System.out.println("----------------------------------------------------------------------------------------------");
 		do {
 			//RESETEAMOS EL VALOR B PARA EVITAR ERRORES AL REALIZAR EL BUCLE
 			numB=0;			
 			//INTRODUCIMOS LOS VALORES EN LA CONSOLA
-			System.out.println("Introduce el número a multiplicar o introduzca '0' para salir.");
+			System.out.println("Introduce el nÃºmero a multiplicar o introduzca '0' para salir.");
 			numA=Leer.datoInt();
-			if(numA==0) {
-				ret=1;
+			if(numA==CERO) {
+				ret=CERO;
 			}
 			
-			if (ret!=1){
-				System.out.printf("¿Hasta qué numero quieres multiplicar el número %d?\n", numA);
+			else{
+				System.out.printf("Â¿Hasta quÃ© numero quieres multiplicar el nÃºmero %d?\n", numA);
 				max=Leer.datoInt();
 				while (numB<max) {
 					numB++;
@@ -28,8 +29,8 @@ public class Principal {
 				}
 			}
 		
+		}while (ret!=CERO);
 		System.out.println("Gracias por usar este programa!");
-		}while (ret!=1);
 
 	}
 }
