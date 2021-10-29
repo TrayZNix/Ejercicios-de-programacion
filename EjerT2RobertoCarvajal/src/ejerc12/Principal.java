@@ -8,7 +8,7 @@ public class Principal {
 		int nota=0, hasta=10, desde=0, CERO=0, UNO=1, ciclo=6, numAsig=6, suspensas=0;
 		double media=0;
 		String PRG="Programaci�n", ED="Entornos de desarrollo", FOL="Formaci�n y orientaci�n laboral", BBDD="Bases de datos";
-		String LGM="Lenguajes de marca y sistemas de gesti�n de informaci�n", SI="Sistemas inform�ticos", alum="Roberto Carvajal";
+		String LGM="Lenguajes de marca y sistemas de gestión de información", SI="Sistemas informáticos", alum="Roberto Carvajal";
 		System.out.printf("|---------------------------------------------------------------|\n");
 		System.out.printf("|Alumno:%s\t\t\t\t\t|\n", alum);
 		System.out.printf("|---------------------------------------------------------------|\n");

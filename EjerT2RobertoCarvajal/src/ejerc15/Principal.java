@@ -5,33 +5,33 @@ import lectura.Leer;
 public class Principal {
 
 	public static void main(String[] args) {
-		int selector=0, exit=0, UNO=1, CERO=0, ret=1;
-		double saldo=5600.35, extrae=0, ingresa=0;
-		String opcionA="1. Ver saldo", opcionB="2. Retirar dinero", opcionC="3. Ingresar dinero", opcionD="4. Comprar entradas";
-		String peliA="Titanic", peliB="Frozen", peliC="Matrix";
+		int selectorMenu=0, selectorPeli=0, exitA=0, exitB=0, UNO=1, CERO=0, ret=1;
+		double saldo=5600.35, extrae=0, ingresa=0, total=0;
+		String opcionA="Ver saldo", opcionB="Retirar dinero", opcionC="Ingresar dinero", opcionD="Comprar entradas";
+		String peliA="Titanic", peliB="Frozen", peliC="Matrix", salir="Exit";
 		System.out.println("Bienvenido. Este programá funcionará igual que la interfaz de un cajero automático");
 		do {
 		System.out.printf("|---------------------------------------------------------------|\n");
 		System.out.printf("|¿Qué desea hacer?\t\t\t\t\t\t|\n");
-		System.out.printf("|%s\t\t\t\t\t\t\t|\n", opcionA);
-		System.out.printf("|%s\t\t\t\t\t\t|\n", opcionB);
-		System.out.printf("|%s\t\t\t\t\t\t|\n", opcionC);
-		System.out.printf("|%s\t\t\t\t\t\t|\n", opcionD);
+		System.out.printf("|...............................................................|\n");
+		System.out.printf("|1.%s\t\t\t\t\t\t\t|\n", opcionA);
+		System.out.printf("|2.%s\t\t\t\t\t\t|\n", opcionB);
+		System.out.printf("|3.%s\t\t\t\t\t\t|\n", opcionC);
+		System.out.printf("|4.%s\t\t\t\t\t\t|\n", opcionD);
+		System.out.printf("|5.%s\t\t\t\t\t\t\t\t|\n", salir);
 		System.out.printf("|\t\t\t\t\t\t\t\t|\n");
-		System.out.printf("|Para salir, escriba 0\t\t\t\t\t\t|\n");
 		System.out.printf("|---------------------------------------------------------------|\n");
 		
-		selector=Leer.datoInt();
-		switch (selector) {
-			case 0:
-				exit=UNO;
-				break;
+		selectorMenu=Leer.datoInt();
+		switch (selectorMenu) {
+			//VER SALDO
 			case 1:
 				System.out.printf("\n\n|---------------------------------------------------------------|\n");
 				System.out.printf("|Su saldo actual es %.2f€\t\t\t\t\t|\n",saldo);
 				System.out.printf("|\t\t\t\t\t\t\t\t|\n");
 				System.out.printf("|---------------------------------------------------------------|\n\n\n");
 				break;
+			//RETIRAR DINERO
 			case 2:
 				do {
 				System.out.printf("|---------------------------------------------------------------|\n");
@@ -56,6 +56,7 @@ public class Principal {
 				}
 				}while (ret==UNO);
 				break;
+			//INGRESAR DINERO
 			case 3:
 				System.out.printf("|---------------------------------------------------------------|\n");
 				System.out.printf("|¿Cuanto dinero desea ingresar?\t\t\t\t\t|\n");
@@ -67,18 +68,47 @@ public class Principal {
 				System.out.printf("|Su saldo actual es %.2f€\t\t\t\t\t|\n", saldo);
 				System.out.printf("|---------------------------------------------------------------|\n\n");
 				break;
+			//COMPRAR ENTRADAS
 			case 4:
+				total=0;
 				System.out.printf("\n|---------------------------------------------------------------|\n");
 				System.out.printf("|Tenemos en taquilla tenemos las siguientes películas\t\t|\n");
-				System.out.printf("|%s\t\t\t\t\t\t\t|\n", peliA);
-				System.out.printf("|%s\t\t\t\t\t\t\t\t|\n", peliB);
-				System.out.printf("|%s\t\t\t\t\t\t\t\t|\n", peliC);
+				System.out.printf("|1.%s\t\t\t\t\t\t\t|\n", peliA);
+				System.out.printf("|2.%s\t\t\t\t\t\t\t\t|\n", peliB);
+				System.out.printf("|3.%s\t\t\t\t\t\t\t\t|\n", peliC);
+				System.out.printf("|4.%s\t\t\t\t\t\t\t\t|\n", salir);
+				System.out.printf("|¿Cual desea ver? Escojala pulsando el número que le corresponde|\n");
+				System.out.printf("|o escriba 0 para salir\t\t\t\t\t\t|\n");
 				System.out.printf("|---------------------------------------------------------------|\n\n");
+				do {
+				selectorPeli=Leer.datoInt();
+				switch (selectorPeli) {
+				case 1:
+					
+					break;
+				case 2:
+					
+					break;
+				case 13:
+					
+					break;
+
+				case 4:
+					break;
+				default:
+					System.out.printf("Entrada desconocida, por favor, introduzca el numero de nuevo");
+					break;
+				}
+				
 				break;
-			default:
+			}while (exitB==UNO);
+			//SALIR
+			case 5:
+				exitA=UNO;
 				break;
-			}
-		}while(exit==CERO);
+			} 
+		
+		} while(exitA==CERO);
 		System.out.printf("|--------------------------------------------------------|\n");
 		System.out.printf("|Hasta la proxima. ¡Muchas gracias!\t\t|\n");
 		System.out.printf("|--------------------------------------------------------|\n");
