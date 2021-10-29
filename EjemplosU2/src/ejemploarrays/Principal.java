@@ -1,4 +1,4 @@
-package ejemploArrays;
+package ejemploarrays;
 
 import ejemplolectura.leer;
 
@@ -9,11 +9,11 @@ public class Principal {
 		
 		int [] edades=new int [tam];
 			for (int i=0;i<edades.length;i++) {
-			System.out.println("Diga un número");
+			System.out.println("Diga un nï¿½mero");
 			edades[i]=leer.datoInt();
 			}
 		for (int i=0; i<edades.length;i++) {
-			System.out.println("El número es: " + edades[i]);
+			System.out.println("El nï¿½mero es: " + edades[i]);
 		}
 	}
 
