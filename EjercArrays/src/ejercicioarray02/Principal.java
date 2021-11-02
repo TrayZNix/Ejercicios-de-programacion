@@ -1,4 +1,4 @@
-package ejArray05;
+package ejercicioarray02;
 
 public class Principal {
 
