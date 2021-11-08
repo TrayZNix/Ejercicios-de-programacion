@@ -7,7 +7,7 @@ public class Principal {
 	public static void main(String[] args) {
 		String opA="Suma", opB="Resta", opC="Multiplicación",opD="División", opE="Paridad", opF="Salir";
 		int	selectorA=0, rept=1, DOS=2, UNO=1, CERO=0;
-		double numA=0, numB=1, suma=0, cocDiv=0, restoDiv=0;
+		double numA=0, numB=1, cocDiv=0;
 		do {
 			System.out.printf("\n|---------------------------------------------------------------|\n");
 			System.out.printf("|¿Cual de las operaciones desea realizar?\t\t\t|\n");
@@ -20,47 +20,39 @@ public class Principal {
 			System.out.printf("|6.%s\t\t\t\t\t\t\t|\n", opF);
 			System.out.printf("|---------------------------------------------------------------|\n");
 			selectorA=Leer.datoInt();
+			System.out.printf("\n|---------------------------------------------------------------|\n");
 			switch (selectorA) {
 				case 1:
-					System.out.printf("\n|---------------------------------------------------------------|\n");
-					System.out.printf("|Introduzca los número que desea sumar.\t\t\t|\n");
+					System.out.printf("|Introduzca los número que desea sumar. Introduzca 0 para sumar los valores.\t\t\t|\n");
 					for(numA=Leer.datoDouble(); numB!=0; numA=numA+numB) {
 						System.out.printf("|+\t\t\t\t\t\t\t\t|\n");
 						numB=Leer.datoDouble();
 						
 					}
-					System.out.printf("|El resultado de la suma es %f.\t\t\t|", numA);
-					System.out.printf("\n|---------------------------------------------------------------|\n\n");
-					System.out.printf("Reiniciando programa.....\n\n");		
+					System.out.printf("|El resultado de la suma es %f.\t\t\t|", numA);	
 					break;
 					
 			case 2:
-					System.out.printf("\n|---------------------------------------------------------------|\n");
-					System.out.printf("|Introduzca los número que desea restar.\t\t\t|\n");
+					
+					System.out.printf("|Introduzca los número que desea restar. Introduzca 0 para restar los valores\t\t\t|\n");
 					for(numA=Leer.datoDouble(); numB!=0; numA=numA-numB) {
 						System.out.printf("|-\t\t\t\t\t\t\t\t|\n");
 						numB=Leer.datoDouble();
 						
 					}
 					System.out.printf("|El resultado de la resta es %f.\t\t\t|", numA);
-					System.out.printf("\n|---------------------------------------------------------------|\n\n");
-					System.out.printf("Reiniciando programa.....\n\n");	
 					break;
 				case 3:
-					System.out.printf("\n|---------------------------------------------------------------|\n");
 					System.out.printf("|Introduzca los número que desea multiplicar.\t\t\t|\n");
 					for(numA=Leer.datoDouble(); numB!=0; numA=numA*numB) {
 						System.out.printf("|x\t\t\t\t\t\t\t\t|\n");
 						numB=Leer.datoDouble();
 						if (numB==0) {
 							System.out.printf("|El resultado de la multiplicación es %f.\t\t|", numA);
-							System.out.printf("\n|---------------------------------------------------------------|\n\n");
-							System.out.printf("Reiniciando programa.....\n\n");	
 							break;
 						}
 					}
 				case 4:
-					System.out.printf("\n|---------------------------------------------------------------|\n");
 					System.out.printf("|Introduce el número que desea dividir:\t\t\t\t|\n");
 					numA=Leer.datoDouble();
 					System.out.printf("|Introduce el número por el que lo desea dividir:\t\t|\n");
@@ -72,23 +64,17 @@ public class Principal {
 						}while (numB==0);
 					cocDiv=numA/numB;
 					System.out.printf("|El cociente de la división es %f\t\t\t\t|", cocDiv);
-					System.out.printf("\n|---------------------------------------------------------------|\n\n");
-					System.out.printf("Reiniciando programa.....\n\n");
+					
 					break;
 				case 5:
-					System.out.printf("\n|---------------------------------------------------------------|\n");
 					System.out.printf("|Introduce el número del cual desea consultar su paridad\t|\n");
 					numA=Leer.datoDouble();
 					numA=numA%DOS;
 					if (numA==CERO) {
 						System.out.printf("|El número introducido es par\t\t\t\t\t|");
-						System.out.printf("\n|---------------------------------------------------------------|\n\n");
-						System.out.printf("Reiniciando programa.....\n\n");
 					}
 					else {
 						System.out.printf("|El número introducido es impar\t\t\t\t\t|");
-						System.out.printf("\n|---------------------------------------------------------------|\n\n");
-						System.out.printf("Reiniciando programa.....\n\n");
 					}
 					
 					break;
@@ -96,6 +82,8 @@ public class Principal {
 					rept=CERO;
 					break;
 			}
+			System.out.printf("\n|---------------------------------------------------------------|\n\n");
+			System.out.printf("Reiniciando programa.....\n\n");
 		} while (rept==UNO);
 		System.out.printf("Muchas gracias por usar este programa!");
 	}

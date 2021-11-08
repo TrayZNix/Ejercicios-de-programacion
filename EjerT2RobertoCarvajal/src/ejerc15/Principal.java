@@ -5,10 +5,10 @@ import lectura.Leer;
 public class Principal {
 
 	public static void main(String[] args) {
-		int selectorMenu=0, selectorPeli=0, exitA=0, exitB=0, UNO=1, CERO=0, ret=1;
-		double saldo=5600.35, extrae=0, ingresa=0, total=0;
+		int selectorMenu=0, selectorPeli=0, exitA=0, exitB=0, UNO=1, CERO=0, ret=1, cantidad=0;
+		double saldo=5600.35, extrae=0, ingresa=0, total=0, precioA=3.5, precioB=3;
 		String opcionA="Ver saldo", opcionB="Retirar dinero", opcionC="Ingresar dinero", opcionD="Comprar entradas";
-		String peliA="Titanic", peliB="Frozen", peliC="Matrix", salir="Exit";
+		String peliA="Titanic", peliB="Frozen", salir="Exit";
 		System.out.println("Bienvenido. Este programá funcionará igual que la interfaz de un cajero automático");
 		do {
 		System.out.printf("|---------------------------------------------------------------|\n");
@@ -74,9 +74,7 @@ public class Principal {
 				System.out.printf("\n|---------------------------------------------------------------|\n");
 				System.out.printf("|Tenemos en taquilla tenemos las siguientes películas\t\t|\n");
 				System.out.printf("|1.%s\t\t\t\t\t\t\t|\n", peliA);
-				System.out.printf("|2.%s\t\t\t\t\t\t\t\t|\n", peliB);
-				System.out.printf("|3.%s\t\t\t\t\t\t\t\t|\n", peliC);
-				System.out.printf("|4.%s\t\t\t\t\t\t\t\t|\n", salir);
+				System.out.printf("|2.%s\t\t\t\t\t\t\t|\n", peliB);
 				System.out.printf("|¿Cual desea ver? Escojala pulsando el número que le corresponde|\n");
 				System.out.printf("|o escriba 0 para salir\t\t\t\t\t\t|\n");
 				System.out.printf("|---------------------------------------------------------------|\n\n");
@@ -84,16 +82,17 @@ public class Principal {
 				selectorPeli=Leer.datoInt();
 				switch (selectorPeli) {
 				case 1:
+					System.out.println("¿Cuantas entradas quiere?");
+					cantidad=Leer.datoInt();
+					total=precioA*cantidad;
+					System.out.printf("En total serán %f€, muchas gracias!", total);
 					
 					break;
 				case 2:
-					
-					break;
-				case 13:
-					
-					break;
-
-				case 4:
+					System.out.printf("¿Cuantas entradas quiere?\n");
+					cantidad=Leer.datoInt();
+					total=precioB*cantidad;
+					System.out.printf("\nEn total serán %f€, muchas gracias!", total);					
 					break;
 				default:
 					System.out.printf("Entrada desconocida, por favor, introduzca el numero de nuevo");
@@ -107,11 +106,10 @@ public class Principal {
 				exitA=UNO;
 				break;
 			} 
-		
 		} while(exitA==CERO);
-		System.out.printf("|--------------------------------------------------------|\n");
-		System.out.printf("|Hasta la proxima. ¡Muchas gracias!\t\t|\n");
-		System.out.printf("|--------------------------------------------------------|\n");
+		System.out.printf("\n|-------------------------------------------------------|\n");
+		System.out.printf("|Hasta la proxima. ¡Muchas gracias!\t\t\t|\n");
+		System.out.printf("|-------------------------------------------------------|\n");
 		
 
 	}

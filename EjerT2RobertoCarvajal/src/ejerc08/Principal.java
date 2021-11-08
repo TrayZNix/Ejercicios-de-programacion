@@ -6,9 +6,11 @@ public class Principal {
 
 	public static void main(String[] args) {
 		//VARIABLES
-		int i=0, sum=0, mult=1, count=0, DIEZ=10, restan=0, CERO=0;
-		//PRESENTACI�N
-		System.out.println("Bienvenido. Este programa le calculará la suma de una secuencia de d�gitos, y el producto de todos ellos");
+		int i=0, sum=0, count=0, DIEZ=10, restan=0, CERO=0;
+		long mult=1;
+		//PRESENTACIÓN
+		System.out.println("Bienvenido. Este programa le calculará la suma de una secuencia de dÍgitos,"
+				+ " y el producto de todos ellos");
 		//DESARROLLO
 		System.out.printf("Introduzca 10 números para operarlos:\n", restan);
 		while (count<DIEZ) {

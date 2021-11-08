@@ -34,7 +34,7 @@ public class Principal {
 						System.out.println("------------------------------------------------------------------------------------------");
 							
 					}
-					else if (read>limite) {
+					else if (read>=limite) {
 						System.out.println("------------------------------------------------------------------------------------------");
 						System.out.printf("\n---Error, introduzca menores o iguales al límite (%d), o 0 para salir---\n\n", limite);
 						System.out.println("------------------------------------------------------------------------------------------");
