@@ -23,8 +23,12 @@ public class Circulo {
 	}
 	
 	//Métodos
-	public double calcularAreaCirculo () {
+	public double calcularAreaCirculoCM () {
 		
 		return Math.PI*(radio*radio);
+	}
+	public double calcularAreaCirculoM () {
+		
+		return Math.PI*(radio*radio/100);
 	}
 }
