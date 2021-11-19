@@ -11,15 +11,18 @@ public class Operaciones {
 		}
 		return result;
 	}
-	
-	/*public void Paridad (int num) {
+
+	public String paridad (int num) {
+		String result;
 		num=num%2;
 		if (num==0) {
-			System.out.println("Su número es par");
+			result="Par";
 		}
 		else {
-			System.out.println("Su número es impar");
+			result="Impar";
 		}
-	}*/
+		return  result;
+	}
+	
 		
 }
