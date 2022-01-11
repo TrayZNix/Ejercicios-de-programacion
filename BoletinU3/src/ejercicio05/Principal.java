@@ -11,6 +11,10 @@ public class Principal {
 		int selector = 0, exit = 0, parImp, compa;
 		Juegos juegos;
 		do {
+			int cuenta=0;
+			for(int i = 0; i < 10; i++) {
+	            cuenta++;
+	            System.out.println(cuenta);}
 		System.out.printf("\n------------------------------------------------------\n");
 		System.out.printf("¿A qué desea jugar?\n");
 		System.out.printf("1.%s\n", quin);
