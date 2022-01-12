@@ -1,5 +1,7 @@
 package ejercicio08;
 
+import java.util.Random;
+
 public class Decimo {
 	//ATRIBUTOS
 	private double precio;
@@ -7,9 +9,12 @@ public class Decimo {
 	
 	//CONSTRUCTOR
 	public Decimo (double precio, int num) {
-		super();
 		this.precio = precio;
 		this.num = num;
+	}
+
+	public Decimo() {
+		// TODO Auto-generated constructor stub
 	}
 
 	//GETTERS Y SETTERS	
@@ -31,5 +36,11 @@ public class Decimo {
 	
 	//METODOS
 	
+	public int generarBoletoAleatorio() {
+		int boletoAleatorio;
+		Random aleatorio = new Random(System.nanoTime());
+		boletoAleatorio = aleatorio.nextInt(99999-1)+1;
+		return boletoAleatorio;
+	}
 	
 }
