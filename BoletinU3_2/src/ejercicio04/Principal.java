@@ -46,6 +46,7 @@ public class Principal {
 			selector = leer.datoInt();
 			IMC = g.calcularIMCCliente(selector);
 			System.out.println("Su IMC es "+IMC);
+			puntero = 0;
 			break;
 			
 		case 2:
@@ -68,6 +69,18 @@ public class Principal {
 			alturaCM = leer.datoDouble();
 			System.out.println("Introduzca su edad");
 			edad = leer.datoInt();
+			Cliente c6 = new Cliente(dni, nombre, apellidos, peso, alturaCM, edad);
+			break;
+		case 4:
+			System.out.println("¿Qué cliente desea dar de baja?");
+			for(int i = 0; i < listaClientes.length; i++) {
+				System.out.println(puntero+". "+listaClientes[i].getNombre()+" "+listaClientes[i].getApellidos()+". DNI: "+listaClientes[i].getDni());
+			puntero++;
+			}
+			puntero = 0;
+			selector = leer.datoInt();
+			
+			break;
 			
 		case 5:
 			do {

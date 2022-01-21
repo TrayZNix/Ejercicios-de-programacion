@@ -3,7 +3,8 @@ package ejercicio04;
 public class Gimnasio {
 	Cliente c;
 	private int clienteNumero;
-	Cliente[] listaClientes = new Cliente[clienteNumero];
+	Cliente[] listaClientes = new Cliente[10];
+	
 	
 	public Gimnasio() {
 		Cliente c1 = new Cliente("Z9728067S", "Eulogio", "Manzanares", 67, 182, 34 );
@@ -16,6 +17,15 @@ public class Gimnasio {
 		this.listaClientes = listaClientes;
 	}
 	
+	//Getters setters
+	public Cliente[] getListaClientes() {
+		return listaClientes;
+	}
+	
+	public void setListaClientes(Cliente[] listaClientes) {
+		this.listaClientes = listaClientes;
+	}
+	
 	//METODOS
 	
 	public double calcularIMCCliente(int selector) {
@@ -25,12 +35,11 @@ public class Gimnasio {
 		IMC = listaClientes[selector].calcularIMC();
 		return IMC;
 	}
-
-	public Cliente[] getListaClientes() {
-		return listaClientes;
+	
+	public void darBaja(int i) {
+	i = i - 1;
+	listaClientes[i].setActivo(false);
+	
 	}
 
-	public void setListaClientes(Cliente[] listaClientes) {
-		this.listaClientes = listaClientes;
-	}
 }
