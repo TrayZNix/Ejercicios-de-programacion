@@ -87,7 +87,7 @@ public class Electrodomestico {
 	
 	public int generarAleatorio(int maximo, int minimo) {
 		int aleatorio;
-		aleatorio = r.nextInt(minimo, maximo);
+		aleatorio = r.nextInt(maximo - minimo)+minimo;
 		return aleatorio;
 		
 	}

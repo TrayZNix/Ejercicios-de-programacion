@@ -13,6 +13,7 @@ public class Sala {
 		this.peliculaMostrada = "Titanic";
 		this.contraseña = 9919;
 		this.costeEntrada = 3.55;
+		Entrada.setPrecio(this.costeEntrada);
 	}
 	//Getters y setters
 
