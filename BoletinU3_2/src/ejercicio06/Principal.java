@@ -53,7 +53,7 @@ public class Principal {
 				}while(loopQuest);
 				loopQuest = false;
 				do {
-					System.out.println("¿En que fila se quiere sentar)");
+					System.out.println("¿En que fila se quiere sentar?");
 					do {
 						fila = leer.datoInt();
 						if (fila >= 1 && fila <= 2) loopQuest = false;
@@ -63,7 +63,7 @@ public class Principal {
 						}
 					}while(loopQuest);
 					do {
-						System.out.println("En que butaca desea sentarse?");
+						System.out.println("¿En que butaca desea sentarse?");
 						butaca = leer.datoInt();
 						if (butaca >= 1 && butaca <= 5) loopQuest = false;
 						else {
