@@ -1,4 +1,4 @@
-package impuestos;
+package ejercicio03;
 
 import lectura.leer;
 

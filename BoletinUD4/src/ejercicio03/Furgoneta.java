@@ -1,4 +1,4 @@
-package impuestos;
+package ejercicio03;
 
 public class Furgoneta extends Vehiculo {
 	private double impuesto;
