@@ -13,6 +13,10 @@ public class Maquina {
 		this.contraseña=383873;
 		this.desbloqueado=false;
 	}
+	/**
+	 * Este método consulta el precio de un tiquet y lo devuelve
+	 * @return el precio de un solo tiquet, en double.
+	 */
 	public double getprecioActual() {
 		this.precio=t.getprecioBillete();
 		return precio;

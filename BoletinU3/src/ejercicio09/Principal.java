@@ -1,9 +1,16 @@
 package ejercicio09;
 
 import lectura.leer;
+/**
+ * Clase en la que encontramos el <strong>menú</strong>, donde el usuario elije que hacer y se hacen llamadas a la clase máquina
+ * 
+ * @version 1.3, 11/02/2022
+ * @author rober
+ *
+ */
 
 public class Principal {
-
+	
 	public static void main(String[] args) {
 		
 		int selector, cantidad, enPosesion = 0, contraseña;
