@@ -15,11 +15,13 @@ public class Principal {
 		Oficina o = new Oficina(maxClientesTotales);
 		do {
 			clientes = o.getClientes();
+			System.out.printf("\n\n\n");
 			System.out.println("Bienvenido! ¿Qué desea hacer?");
 			System.out.println("-------------------------------------------");
 			System.out.println("0. Salir del programa");
 			System.out.println("1. Identificarme"); //logueo
 			System.out.println("2. Darme de alta"); //Crear cliente
+			System.out.printf("\n\n\n");
 			selector = leer.datoInt();
 			switch (selector) {
 				default:
@@ -68,6 +70,7 @@ public class Principal {
 				System.out.println("2. Ver saldo de una cuenta");
 				System.out.println("3. Ingresar dinero");
 				System.out.println("4. Retirar dinero");
+				System.out.printf("\n\n\n");
 				selector = leer.datoInt();
 				switch (selector) {
 					default: 
@@ -86,7 +89,9 @@ public class Principal {
 							do {
 							selector = leer.datoInt();
 							if(selector > 3 | selector < 0) {
+								System.out.printf("\n\n\n");
 								System.out.println("Error al leer, escriba de nuevo");
+								System.out.printf("\n\n\n");
 							}
 							else if (selector == 0) {
 								break;
@@ -107,7 +112,9 @@ public class Principal {
 						do {
 							selector = leer.datoInt();
 							if(selector > 3 | selector < 0) {
+								System.out.printf("\n\n\n");
 								System.out.println("Error al leer, escriba de nuevo");
+								System.out.printf("\n\n\n");
 							}
 						}while (selector > 3 | selector < 1);
 						if (selector == CERO);
@@ -117,7 +124,9 @@ public class Principal {
 						
 						}
 						else {
+							System.out.printf("\n\n\n");
 							System.out.println("Debes tener una cuenta!");
+							System.out.printf("\n\n\n");
 						}
 						break;
 					case 3:
@@ -126,7 +135,9 @@ public class Principal {
 						do {
 							selector = leer.datoInt();
 							if(selector > 3 | selector < 0) {
+								System.out.printf("\n\n\n");
 								System.out.println("Error al leer, escriba de nuevo");
+								System.out.printf("\n\n\n");
 							}
 						}while (selector > 3 | selector < 1);
 						if (selector == CERO);
@@ -147,7 +158,9 @@ public class Principal {
 						do {
 							selector = leer.datoInt();
 							if(selector > 3 | selector < 0) {
+								System.out.printf("\n\n\n");
 								System.out.println("Error al leer, escriba de nuevo");
+								System.out.printf("\n\n\n");
 							}
 						}while (selector > 3 | selector < 1);
 						if (selector == CERO);
@@ -170,6 +183,7 @@ public class Principal {
 			}while(loop);
 		
 			}
+		System.out.printf("\n\n\n");
 		System.out.println("Gracias por usar este programa!0");
 		}
 
