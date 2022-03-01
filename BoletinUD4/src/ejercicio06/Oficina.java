@@ -113,7 +113,11 @@ public class Oficina {
 			clientes[numCliente].crearCuenta(c);
 		}
 	}
-	
+	/**
+	 * Este metodo caga dinero con pies <em>Hola danno wapo</em>
+	 * @see 
+	 * @param 
+	 */
 	public void imprimirCuentasCliente(int numCliente) {
 		clientes[numCliente].imprimirCuentas();
 	}

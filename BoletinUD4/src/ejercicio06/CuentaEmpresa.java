@@ -19,6 +19,7 @@ public class CuentaEmpresa extends Cuenta{
 	@Override
 	public void retirarDinero(double dinero) {
 		this.saldoCuenta = this.saldoCuenta - dinero - this.comisionExtraccion;
+		
 	} 
 
 }
