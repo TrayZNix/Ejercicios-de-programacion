@@ -62,8 +62,15 @@ public class Aula {
 	}
 	
 	public void modificarAlumno(int selector, String nombre, String apellidos, int edad) {
-		Alumno a = new Alumno(nombre, apellidos, edad);
-		//this.alumnos.
+		int contador = 0;
+		for (Alumno a : this.alumnos) {
+			if(contador == selector) {
+				this.alumnos.remove(a);
+				Alumno b = new Alumno(nombre, apellidos, edad);
+				this.alumnos.add(b);
+			}
+			contador++;
+		}
 	}
 	
 	public void eliminarAlumno(int selector) {
