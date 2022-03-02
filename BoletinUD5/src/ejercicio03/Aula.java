@@ -1,10 +1,11 @@
 package ejercicio03;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 public class Aula {
-	private ArrayList <Alumno> alumnos = new ArrayList<Alumno>();
+	private HashSet <Alumno> alumnos = new HashSet<Alumno>();
 	private int curso;
 	private char claseCurso;
 	
@@ -13,11 +14,11 @@ public class Aula {
 		this.claseCurso = claseCurso;
 	}
 
-	public ArrayList<Alumno> getAlumnos() {
+	public HashSet<Alumno> getAlumnos() {
 		return alumnos;
 	}
 
-	public void setAlumnos(ArrayList<Alumno> alumnos) {
+	public void setAlumnos(HashSet<Alumno> alumnos) {
 		this.alumnos = alumnos;
 	}
 
@@ -62,7 +63,7 @@ public class Aula {
 	
 	public void modificarAlumno(int selector, String nombre, String apellidos, int edad) {
 		Alumno a = new Alumno(nombre, apellidos, edad);
-		this.alumnos.set(selector, a);
+		//this.alumnos.
 	}
 	
 	public void eliminarAlumno(int selector) {
