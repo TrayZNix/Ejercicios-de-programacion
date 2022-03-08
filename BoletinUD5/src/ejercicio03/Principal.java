@@ -7,7 +7,7 @@ public class Principal {
 	public static void main(String[] args) {
 		int selector, edad, UNO = 1, confirmacion;
 		boolean loop = true;
-		String nombre, apellidos;
+		String nombre, apellidos, dni;
 		Aula a = new Aula(1, 'A');
 		
 		do {
@@ -36,22 +36,27 @@ public class Principal {
 				apellidos = leer.dato();
 				System.out.println("Introduzca la edad del alumno");
 				edad = leer.datoInt();
-				a.anyadirAlumno(nombre, apellidos, edad);
+				System.out.println("¿Cual es el dni del alumno?");
+				dni = leer.dato();
+				a.anyadirAlumno(nombre, apellidos, edad, dni);
 				System.out.println("Se ha añadido el alumno");
 				break;
 			case 3:
-				System.out.println("Elija que alumno desea modificar");
+				System.out.println("Introduzca el dni del alumno que quiere modificar");
 				System.out.println(".........................................");
-				a.mostrarLista();
-				selector = leer.datoInt();
-				selector--;
-				System.out.println("Introduzca el nombre");
-				nombre = leer.dato();
-				System.out.println("Introduzca el apellido");
-				apellidos = leer.dato();
-				System.out.println("Introduzca la edad");
-				edad = leer.datoInt();
-				a.modificarAlumno(selector, nombre, apellidos, edad);
+				dni = leer.dato();
+				if (a.comprobarExiste(dni)){
+					System.out.println("Introduzca el nombre");
+					nombre = leer.dato();
+					System.out.println("Introduzca el apellido");
+					apellidos = leer.dato();
+					System.out.println("Introduzca la edad");
+					edad = leer.datoInt();
+					a.modificarAlumno(nombre, apellidos, edad, dni);
+				}
+				else {
+					System.out.println("No se ha encontrado ningun alumno con ese DNI");
+				}
 				break;
 			case 4:
 				System.out.println("Elija que alumno desea modificar");

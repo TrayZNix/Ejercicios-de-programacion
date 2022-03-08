@@ -3,14 +3,16 @@ package ejercicio03;
 public class Alumno {
 	private String nombre;
 	private String apellidos;
+	private String dni;
 	private int edad;
 	
 	//Constructor
-	public Alumno(String nombre, String apellidos, int edad) {
+	public Alumno(String nombre, String apellidos, int edad, String dni) {
 		super();
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.edad = edad;
+		this.dni = dni;
 	}
 	
 	//Getters y setters 
@@ -37,6 +39,14 @@ public class Alumno {
 
 	public void setEdad(int edad) {
 		this.edad = edad;
+	}
+	
+	public String getDni() {
+		return dni;
+	}
+
+	public void setDni(String dni) {
+		this.dni = dni;
 	}
 
 	@Override

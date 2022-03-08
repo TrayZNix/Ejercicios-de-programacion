@@ -56,20 +56,20 @@ public class Aula {
 		}
 		System.out.printf("\n\n");
 	}
-	public void anyadirAlumno(String nombre, String apellidos, int edad) {
-		Alumno a = new Alumno(nombre, apellidos, edad);
+	public void anyadirAlumno(String nombre, String apellidos, int edad, String dni) {
+		Alumno a = new Alumno(nombre, apellidos, edad, dni);
 		this.alumnos.add(a);
 	}
 	
-	public void modificarAlumno(int selector, String nombre, String apellidos, int edad) {
+	public void modificarAlumno(String nombre, String apellidos, int edad, String dni) {
 		int contador = 0;
 		for (Alumno a : this.alumnos) {
-			if(contador == selector) {
-				this.alumnos.remove(a);
-				Alumno b = new Alumno(nombre, apellidos, edad);
-				this.alumnos.add(b);
+			if (a.getDni().equalsIgnoreCase(dni)) {
+				a.setNombre(nombre);
+				a.setApellidos(apellidos);
+				a.setEdad(edad);
 			}
-			contador++;
+			
 		}
 	}
 	
@@ -77,6 +77,15 @@ public class Aula {
 		this.alumnos.remove(selector);
 		
 		
+	}
+	
+	public boolean comprobarExiste(String dni) {
+		for(Alumno a : this.alumnos) {
+			if(a.getDni().equalsIgnoreCase(dni)) {
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	
