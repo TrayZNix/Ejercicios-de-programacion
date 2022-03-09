@@ -73,10 +73,14 @@ public class Aula {
 		}
 	}
 	
-	public void eliminarAlumno(int selector) {
-		this.alumnos.remove(selector);
-		
-		
+	public void eliminarAlumno(String dni) {
+		int contador = 0;
+		for (Alumno a : this.alumnos) {
+			if (a.getDni().equalsIgnoreCase(dni)) {
+				this.alumnos.remove(a);
+			}
+			
+		}
 	}
 	
 	public boolean comprobarExiste(String dni) {

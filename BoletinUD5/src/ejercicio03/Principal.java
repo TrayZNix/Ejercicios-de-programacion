@@ -59,17 +59,19 @@ public class Principal {
 				}
 				break;
 			case 4:
-				System.out.println("Elija que alumno desea modificar");
-				System.out.println(".........................................");
-				a.mostrarLista();		
-				selector = leer.datoInt();
-				selector--;
-				System.out.println("Seguro que desea eliminar este alumno?");
-				System.out.println("0.No            1. Sí ");
-				confirmacion = leer.datoInt();
-				if (confirmacion == UNO) {
-					a.eliminarAlumno(selector);
-					System.out.println("Se ha eliminado el alumno");
+				System.out.println("Escriba el dni del alumno a eliminar");
+				dni = leer.dato();
+				if (a.comprobarExiste(dni)) {
+					System.out.println("Seguro que desea eliminar este alumno?");
+					System.out.println("0.No            1. Sí ");
+					confirmacion = leer.datoInt();
+					if (confirmacion == UNO) {
+						a.eliminarAlumno(dni);
+						System.out.println("Se ha eliminado el alumno");
+					}
+				}
+				else {
+					System.out.println("No se ha encontrado ningun alumno con ese DNI");
 				}
 				break;
 		}
