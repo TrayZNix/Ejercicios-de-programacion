@@ -30,6 +30,6 @@ public class CRUDWorker {
 	}
 	
 	public void sortList() {
-		workers.sort(Comparator.comparing(Worker::getDni));
+		Collections.sort(workers, new CompareDni());
 	}
 }
