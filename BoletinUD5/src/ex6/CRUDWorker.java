@@ -2,8 +2,7 @@ package ex6;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.Iterator;
 
 public class CRUDWorker {
 	ArrayList <Worker> workers = new ArrayList<Worker>();
@@ -31,5 +30,15 @@ public class CRUDWorker {
 	
 	public void sortList() {
 		Collections.sort(workers, new CompareDni());
+	}
+	
+	public void search(String dni) {
+		 Iterator<Worker> it = workers.iterator();
+		 while(it.hasNext()){
+			Worker w = it.next();
+			if(dni.equalsIgnoreCase(w.getDni())) {
+				System.out.println(w.toString());				
+			}
+		}
 	}
 }

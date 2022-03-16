@@ -7,12 +7,10 @@ public class Main {
 	public static void main(String[] args) {
 		String s;
 		CRUDWorker crdw = new CRUDWorker();
-		crdw.addWorker("885A");
-		crdw.addWorker("235B");
-		crdw.addWorker("5434");
-		crdw.addWorker("5");
-		crdw.printList();
-		s = leer.dato();
+		crdw.addWorker("12345A");
+		crdw.addWorker("34567C");
+		crdw.addWorker("23456C");
+		crdw.addWorker("54445A");
 		crdw.sortList();
 		crdw.printList();
 
