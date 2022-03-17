@@ -5,8 +5,7 @@ public class Cuadrado extends Figuras {
 	private double ladoA;
 	
 	//Constructor
-	public Cuadrado(double ladoA) {
-		this.ladoA = ladoA;
+	public Cuadrado() {
 	}
 
 	//Getters y setters

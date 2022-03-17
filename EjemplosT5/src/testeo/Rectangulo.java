@@ -1,14 +1,12 @@
 package testeo;
 
-public class Rectangulo {
+public class Rectangulo extends Figuras {
 	//Atributos
 	private double ladoA;
 	private double ladoB;
 	
 	//Constructor
-	public Rectangulo(double ladoA, double ladoB) {
-		this.ladoA = ladoA;
-		this.ladoB = ladoB;		
+	public Rectangulo() {	
 	}
 	
 	//Getters y setters
