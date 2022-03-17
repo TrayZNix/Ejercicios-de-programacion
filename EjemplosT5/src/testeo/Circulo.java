@@ -19,6 +19,12 @@ public class Circulo extends Figuras{
 		int DOS = 2;
 		return Math.PI*(Math.pow(getRadio(), DOS));
 	}
+
+	@Override
+	public String toString() {
+		return "Circulo [radio=" + radio + "]";
+	}
+	
 	
 	
 }

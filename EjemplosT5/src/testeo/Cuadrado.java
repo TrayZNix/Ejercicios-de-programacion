@@ -16,6 +16,12 @@ public class Cuadrado extends Figuras {
 	public void setLadoA(double ladoA) {
 		this.ladoA = ladoA;
 	}
+
+	@Override
+	public String toString() {
+		return "Cuadrado [ladoA=" + ladoA + "]";
+	}
+	
 	
 	//Metodos
 	

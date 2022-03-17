@@ -25,6 +25,12 @@ public class Rectangulo extends Figuras {
 	public void setLadoB(double ladoB) {
 		this.ladoB = ladoB;
 	}
+
+	@Override
+	public String toString() {
+		return "Rectangulo [ladoA=" + ladoA + ", ladoB=" + ladoB + "]";
+	}
+	
 	
 	//Metodos
 	
