@@ -1,7 +1,5 @@
 package testeo;
 
-import java.util.stream.DoubleStream;
-
 public class Principal {
 
 	public static void main(String[] args) {
