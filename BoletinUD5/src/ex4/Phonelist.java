@@ -29,7 +29,7 @@ public class Phonelist {
 	}
 	
 	public void updateContact(Contact key) {
-		this.contacts.put(key, "si");
+		this.contacts.put(key, "666");
 	}
 	
 	public void printSorted() {

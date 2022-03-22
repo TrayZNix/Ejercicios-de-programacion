@@ -4,19 +4,19 @@ public class Main {
 
 	public static void main(String[] args) {
 		Phonelist p = new Phonelist();
-		p.addContact("R", "J", "2223322");
-		p.addContact("34", "54J", "2223322");
-		p.addContact("R7", "J9", "222f22");
-		p.addContact("R8", "J7", "22h22");
-		p.addContact("R5", "J9", "222f21");
-		p.addContact("R9", "J7", "22h23");
+		p.addContact("Bicho", "Ronaldo", "955713562");
+		p.addContact("Bicho", "Fernández", "695750080");
+		p.addContact("Marcos", "Alberca", "685958612");
+		p.addContact("Susana", "Alves", "997725512");
+		p.addContact("Leo", "Messi", "954564186");
+		p.addContact("Paco", "Nieto", "695778459");
 		p.printList();
-		Contact c = new Contact("R8", "J7");
+		Contact c = new Contact("Susana", "Alves");
 		System.out.println("-..-.-.-.-.-..-..-.-.-.-..--.-..-.--");
 		p.removeContact(c);
 		p.printList();
 		System.out.println("-..-.-.-.-.-..-..-.-.-.-..--.-..-.--");
-		Contact c2 = new Contact("R7", "J9");
+		Contact c2 = new Contact("Leo", "Messi");
 		p.updateContact(c2);
 		p.printSorted();
 	}

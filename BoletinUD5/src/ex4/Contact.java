@@ -9,7 +9,7 @@ public class Contact implements Comparable<Contact>{
 	
 	public Contact(String name, String surname) {
 		super();
-		this.name = name;
+		this.name = name; 
 		this.surname = surname;
 	}
 	
@@ -49,7 +49,8 @@ public class Contact implements Comparable<Contact>{
 	}
 
 	@Override
-	public int compareTo(Contact o) { 
+	public int compareTo(Contact o)	{
+		
 		return (this.getName().compareToIgnoreCase(o.getName()));
 	}
 	
