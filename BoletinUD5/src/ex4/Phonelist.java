@@ -3,6 +3,8 @@ package ex4;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.SortedMap;
+import java.util.TreeMap;
 
 public class Phonelist {
 	
@@ -28,5 +30,19 @@ public class Phonelist {
 	
 	public void updateContact(Contact key) {
 		this.contacts.put(key, "si");
+	}
+	
+	public void printSorted() {
+		SortedMap<Contact, String> sortedContacts = new TreeMap<Contact, String>();
+		sortedContacts.putAll(contacts);
+		
+		
+		System.out.println();
+		Iterator<Contact> itr = sortedContacts.keySet().iterator();
+		while(itr.hasNext()) {
+			Contact key = itr.next();
+			System.out.println(key + " = "+sortedContacts.get(key)                                  );
+			
+		}
 	}
 }
