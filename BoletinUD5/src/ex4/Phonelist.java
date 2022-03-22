@@ -30,7 +30,21 @@ public class Phonelist {
 	}
 	
 	public void updateContact(Contact key) {
-		this.contacts.put(key, "si");
+		this.contacts.put(key, "666");
+	}
+	
+	public void printSorted() {
+		SortedMap<Contact, String> sortedContacts = new TreeMap<Contact, String>();
+		sortedContacts.putAll(contacts);
+		
+		
+		System.out.println();
+		Iterator<Contact> itr = sortedContacts.keySet().iterator();
+		while(itr.hasNext()) {
+			Contact key = itr.next();
+			System.out.println(key + " = "+sortedContacts.get(key)                                  );
+			
+		}
 	}
 	
 	public void sortMap() {

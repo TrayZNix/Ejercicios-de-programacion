@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>EjercBol1</name>
+	<name>ProyectoSortedMap</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -16,7 +16,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1647966431543</id>
+			<id>1647966431741</id>
 			<name></name>
 			<type>30</type>
 			<matcher>

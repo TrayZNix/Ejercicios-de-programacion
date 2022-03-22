@@ -2,14 +2,14 @@ package ex4;
 
 import java.util.Objects;
 
-public class Contact implements Comparable<Contact> {
+public class Contact implements Comparable<Contact>{
 	private String name;
 	private String surname;
 	
 	
 	public Contact(String name, String surname) {
 		super();
-		this.name = name;
+		this.name = name; 
 		this.surname = surname;
 	}
 	
@@ -49,9 +49,9 @@ public class Contact implements Comparable<Contact> {
 	}
 
 	@Override
-	public int compareTo(Contact o) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int compareTo(Contact o)	{
+		
+		return (this.getName().compareToIgnoreCase(o.getName()));
 	}
 	
 	
