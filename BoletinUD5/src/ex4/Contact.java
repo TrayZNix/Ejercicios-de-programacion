@@ -2,7 +2,7 @@ package ex4;
 
 import java.util.Objects;
 
-public class Contact {
+public class Contact implements Comparable<Contact> {
 	private String name;
 	private String surname;
 	
@@ -46,6 +46,12 @@ public class Contact {
 			return false;
 		Contact other = (Contact) obj;
 		return Objects.equals(name, other.name) && Objects.equals(surname, other.surname);
+	}
+
+	@Override
+	public int compareTo(Contact o) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 	

@@ -13,7 +13,7 @@ public class Main {
 		Contact c2 = new Contact("R7", "J9");
 		System.out.println("-..-.-.-.-.-..-..-.-.-.-..--.-..-.--");
 		p.removeContact(c);
-		p.printList();
+		p.sortMap();
 		System.out.println("-..-.-.-.-.-..-..-.-.-.-..--.-..-.--");
 		p.updateContact(c2);
 		p.printList();
