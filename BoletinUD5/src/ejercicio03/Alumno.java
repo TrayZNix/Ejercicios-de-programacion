@@ -2,7 +2,7 @@ package ejercicio03;
 
 import java.util.Objects;
 
-public class Alumno {
+public class Alumno implements Comparable<Alumno> {
 	private String nombre;
 	private String apellidos;
 	private String dni;
@@ -72,6 +72,11 @@ public class Alumno {
 		Alumno other = (Alumno) obj;
 		return Objects.equals(apellidos, other.apellidos) && Objects.equals(dni, other.dni) && edad == other.edad
 				&& Objects.equals(nombre, other.nombre);
+	}
+
+	@Override
+	public int compareTo(Alumno o) {
+		return (this.getNombre().compareToIgnoreCase(o.getNombre()));
 	}
 	
 	

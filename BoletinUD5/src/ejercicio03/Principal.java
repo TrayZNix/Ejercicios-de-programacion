@@ -15,6 +15,7 @@ public class Principal {
 		System.out.println("-----------------------------");
 		System.out.println("0. Salir");
 		System.out.println("1. Mostrar alumnos");
+		System.out.println("5. Mostrar alumnos ordenados segun nombre");
 		System.out.println("2. Añadir alumnos");
 		System.out.println("3. Modificar alumnos");
 		System.out.println("4. Eliminar alumnos");
@@ -73,6 +74,20 @@ public class Principal {
 				else {
 					System.out.println("No se ha encontrado ningun alumno con ese DNI");
 				}
+				break;
+			case 5:
+				a.imprimirListaOrdenada();
+				break;
+			case 6:
+				a.anyadirAlumno("Pepe", "Maricona", 13, "Trompeta");
+				a.anyadirAlumno("Pepo", "Maricona", 15, "Trompeta");
+				a.anyadirAlumno("Pape", "Maricona", 11, "Trompeta");
+				a.anyadirAlumno("Sepe", "Maricona", 17, "Trompeta");
+				a.anyadirAlumno("Lepe", "Maricona", 13, "Trompeta");
+				a.anyadirAlumno("Pepe", "Maaricon", 23, "Trompeta");
+				break;
+			case 7:
+				a.imprimirListaOrdenadaEdad();
 				break;
 		}
 		}while (loop);

@@ -3,6 +3,9 @@ package ejercicio03;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 public class Aula {
 	private HashSet <Alumno> alumnos = new HashSet<Alumno>();
@@ -91,7 +94,19 @@ public class Aula {
 		}
 		return false;
 	}
-	
+	public void imprimirListaOrdenada() {
+		SortedSet<Alumno> setSortAlumnos = new TreeSet<Alumno>(this.alumnos);
+		for(Alumno a : setSortAlumnos) {
+			System.out.println(a);
+		}
+	}
+	public void imprimirListaOrdenadaEdad(){
+		Set<Alumno> alumnao = new TreeSet<Alumno>(new CompararSegunEdad());
+		alumnao.addAll(this.alumnos);
+		for(Alumno a : alumnao) {
+			System.out.println(a);
+		}
+	}
 	
 	
 	
