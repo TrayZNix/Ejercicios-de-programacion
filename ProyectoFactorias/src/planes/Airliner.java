@@ -9,41 +9,17 @@ import java.util.Objects;
  */
 public class Airliner extends Plane {
 	//Attributes
-	private int maxTouristSeatsNumber;
-	private int maxEconomySeatsNumber;
-	private int maxBusinessSeatsNumber;
 	private boolean hasFood;
 	private boolean lowCost;
 	//Constructor
+	
 	public Airliner(String registration, String name, String manufacturer, String owner, double littersGasCapacity,
-			int wheelsNumber, int engineNumber, int maxTouristSeatsNumber, int maxEconomySeatsNumber,
-			int maxBusinessSeatsNumber, boolean hasFood, boolean lowCost) {
+			int wheelsNumber, int engineNumber) {
 		super(registration, name, manufacturer, owner, littersGasCapacity, wheelsNumber, engineNumber);
-		this.maxTouristSeatsNumber = maxTouristSeatsNumber;
-		this.maxEconomySeatsNumber = maxEconomySeatsNumber;
-		this.maxBusinessSeatsNumber = maxBusinessSeatsNumber;
-		this.hasFood = hasFood;
-		this.lowCost = lowCost;
 	}
+
 	//Getters, setters, toString, equals
-	public int getMaxTouristSeatsNumber() {
-		return maxTouristSeatsNumber;
-	}
-	public void setMaxTouristSeatsNumber(int maxTouristSeatsNumber) {
-		this.maxTouristSeatsNumber = maxTouristSeatsNumber;
-	}
-	public int getMaxEconomySeatsNumber() {
-		return maxEconomySeatsNumber;
-	}
-	public void setMaxEconomySeatsNumber(int maxEconomySeatsNumber) {
-		this.maxEconomySeatsNumber = maxEconomySeatsNumber;
-	}
-	public int getMaxBusinessSeatsNumber() {
-		return maxBusinessSeatsNumber;
-	}
-	public void setMaxBusinessSeatsNumber(int maxBusinessSeatsNumber) {
-		this.maxBusinessSeatsNumber = maxBusinessSeatsNumber;
-	}
+
 	public boolean isHasFood() {
 		return hasFood;
 	}
@@ -58,16 +34,13 @@ public class Airliner extends Plane {
 	}
 	@Override
 	public String toString() {
-		return "Airliner [maxTouristSeatsNumber=" + maxTouristSeatsNumber + ", maxEconomySeatsNumber="
-				+ maxEconomySeatsNumber + ", maxBusinessSeatsNumber=" + maxBusinessSeatsNumber + ", hasFood=" + hasFood
-				+ ", lowCost=" + lowCost + ", toString()=" + super.toString() + "]";
+		return "Airliner [hasFood=" + hasFood + ", lowCost=" + lowCost + ", toString()=" + super.toString() + "]";
 	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = super.hashCode();
-		result = prime * result
-				+ Objects.hash(hasFood, lowCost, maxBusinessSeatsNumber, maxEconomySeatsNumber, maxTouristSeatsNumber);
+		result = prime * result + Objects.hash(hasFood, lowCost);
 		return result;
 	}
 	@Override
@@ -79,10 +52,7 @@ public class Airliner extends Plane {
 		if (getClass() != obj.getClass())
 			return false;
 		Airliner other = (Airliner) obj;
-		return hasFood == other.hasFood && lowCost == other.lowCost
-				&& maxBusinessSeatsNumber == other.maxBusinessSeatsNumber
-				&& maxEconomySeatsNumber == other.maxEconomySeatsNumber
-				&& maxTouristSeatsNumber == other.maxTouristSeatsNumber;
+		return hasFood == other.hasFood && lowCost == other.lowCost;
 	}
 	
 	

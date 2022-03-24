@@ -12,13 +12,12 @@ public class Military extends Plane {
 	private boolean flares;
 	//Constructor
 	public Military(String registration, String name, String manufacturer, String owner, double littersGasCapacity,
-			int wheelsNumber, int engineNumber, String type, boolean guns, boolean flares) {
+			int wheelsNumber, int engineNumber, String type) {
 		super(registration, name, manufacturer, owner, littersGasCapacity, wheelsNumber, engineNumber);
 		this.type = type;
-		this.guns = guns;
-		this.flares = flares;
-	//Getters, setters, toString, equals, etc
 	}
+	//Getters, setters, toString, equals, etc
+	
 	public String getType() {
 		return type;
 	}

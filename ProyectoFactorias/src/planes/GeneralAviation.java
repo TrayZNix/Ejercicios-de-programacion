@@ -12,11 +12,9 @@ public class GeneralAviation extends Plane {
 	private boolean shared;
 	private boolean type; //AirTaxi, personal, sport usage, etc...
 	//Constructor
-	public GeneralAviation(String registration, String name, String manufacturer, String owner,
-			double littersGasCapacity, int wheelsNumber, int engineNumber, boolean shared, boolean type) {
+	public GeneralAviation(String registration, String name, String manufacturer, String owner, double littersGasCapacity,
+			int wheelsNumber, int engineNumber) {
 		super(registration, name, manufacturer, owner, littersGasCapacity, wheelsNumber, engineNumber);
-		this.shared = shared;
-		this.type = type;
 	}
 	//Getters, setters, toString, equals, etc	
 	public boolean isShared() {

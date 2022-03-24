@@ -2,7 +2,7 @@ package planes;
 
 import java.util.Objects;
 
-public abstract class Plane {
+public abstract class Plane implements Comparable<Plane>{
 	//Attributes
 	private String registration;
 	private String name;
@@ -108,6 +108,9 @@ public abstract class Plane {
 				&& Objects.equals(manufacturer, other.manufacturer) && Objects.equals(name, other.name)
 				&& Objects.equals(owner, other.owner) && Objects.equals(registration, other.registration)
 				&& wheelsNumber == other.wheelsNumber;
+	}
+	public int compareTo(Plane p) {
+		return (this.registration.compareToIgnoreCase(p.registration));
 	}
 	
 	

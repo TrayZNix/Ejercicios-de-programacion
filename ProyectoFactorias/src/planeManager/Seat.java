@@ -1,6 +1,8 @@
 package planeManager;
 
-public class Seat {
+import java.util.Objects;
+
+public class Seat implements Comparable<Seat>{
 	//Attributes 
 	private double price;
 	private boolean windowPlaced;
@@ -55,6 +57,27 @@ public class Seat {
 		}
 		return info;
 	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(extras, price, seatNumber, windowPlaced);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Seat other = (Seat) obj;
+		return extras == other.extras && Double.doubleToLongBits(price) == Double.doubleToLongBits(other.price)
+				&& Objects.equals(seatNumber, other.seatNumber) && windowPlaced == other.windowPlaced;
+	}
+	@Override
+	public int compareTo(Seat o) {
+		return (this.seatNumber.compareToIgnoreCase(o.seatNumber));
+	}
+	
 	
 	
 
