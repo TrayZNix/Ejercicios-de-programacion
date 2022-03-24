@@ -56,6 +56,6 @@ public abstract class Producto implements Comparable {
 	
 	public int compareTo(Producto p) {
 		// TODO Auto-generated method stub
-		return -(this.nombreProducto.compareToIgnoreCase(p.getNombreProducto()));
+		return (this.nombreProducto.compareToIgnoreCase(p.getNombreProducto()));
 	}
 }

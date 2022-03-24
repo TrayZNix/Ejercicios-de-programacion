@@ -3,7 +3,7 @@ package ej02;
 public class Main {
 
 	public static void main(String[] args) {
-		Producto p = new Espada(50, 17, "Espadaca", "Doble");
+		Producto p = new Espada(50, 17, "Espadacca", "Doble");
 		Producto p2 = new Espada(60, 11, "Espadata", "Triple");
 		Producto p3 = new Espada(70, 12, "Espadat", "Cuadruple");
 		Producto p4 = new Espada(80, 14, "Espada", "Pentagonal");
