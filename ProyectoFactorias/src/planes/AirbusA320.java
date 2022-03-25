@@ -2,7 +2,7 @@ package planes;
 
 public class AirbusA320 extends Airliner {
 	//Attributes 
-	private planeManager.Seat[][] seats = new planeManager.Seat[26][6];
+	private planeManager.Seat[][] seats = new planeManager.Seat[26][6]; //Seatmap
 	
 	//Constructor
 	public AirbusA320(String registration, String owner) {

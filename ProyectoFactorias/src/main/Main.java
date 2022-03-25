@@ -1,24 +1,71 @@
 package main;
 
-import java.util.ArrayList;
-import java.util.List;
 
-import planeManager.Database;
 import planeManager.PlanesManager;
-import planes.PlanesFactory;
+import utility.Printer;
+import utility.leer;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
-
-		List<planes.Plane> airlinerList = new ArrayList<planes.Plane>();
-		Database db = new Database();
+		boolean loop = true, check=true;
+		int selector;
+		Printer pr = new Printer();
 		PlanesManager pm = new PlanesManager();
-		PlanesFactory pf= new PlanesFactory();
+		String registration, owner;
+		String planeGA1 = "C172", planeGA2 = "TP2002";
 		
-		pm.addAirliner();
-		pm.printAllPlaneList();
+		pr.printLogo();
+		
+		do {
+			pr.printMenu();
+			selector = leer.datoInt();
+			switch(selector) {
+				default: 
+					System.out.println("Reading error. Please, try again");
+					break;
+				case 1:
+					pr.printAddPlaneMenu();
+					selector = leer.datoInt();
+					switch (selector ) {
+						default:
+							System.out.println("Reading error");
+							break;
+						case 1:
+							do {
+								System.out.println("Enter your new plane's registration: ");
+								registration = leer.dato();
+								check = pm.checkRegistrationUsed(registration);
+								if(check) System.out.println("Registration plate already in use, try other.");
+							}while(check);
+							System.out.println("Write the owner's name: ");
+							owner = leer.dato();
+							pr.printGeneralAvPlanesMenu();
+							selector = leer.datoInt();
+							switch(selector) {
+								default:
+									System.out.println("Reading error");
+									break;
+								case 0:
+									break;
+								case 1:
+									pm.addPlane(planeGA1, registration, owner);
+									pm.addRegistration(registration);
+									System.out.println("Plane added successfully");
+									break;
+								case 2:
+									pm.addPlane(planeGA2, registration, owner);
+									pm.addRegistration(registration);
+									System.out.println("Plane added successfully");
+									break;
+							}
+							
+					}
+			}
+			
+		}while(loop);
+		
 	}
 
 }
