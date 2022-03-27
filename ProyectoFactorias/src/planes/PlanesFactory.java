@@ -41,10 +41,10 @@ public class PlanesFactory {
 				p = new KC46A(registration, owner);
 				break;
 			case "C172":
-				p = new AirbusA320(registration, owner);
+				p = new Cessna172(registration, owner);
 				break;
 			case "TP2002":
-				p = new AirbusA320(registration, owner);
+				p = new TecnamP2002(registration, owner);
 				break;
 		}
 		return p;

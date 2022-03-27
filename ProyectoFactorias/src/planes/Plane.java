@@ -110,8 +110,13 @@ public abstract class Plane implements Comparable<Plane>{
 				&& wheelsNumber == other.wheelsNumber;
 	}
 	public int compareTo(Plane p) {
-		return (this.registration.compareToIgnoreCase(p.registration));
+		return (this.owner.compareToIgnoreCase(p.owner));
 	}
+	
+	//Methods
+	
+	public abstract void setExtras(boolean extraA, boolean extraB);
+	
 	
 	
 	

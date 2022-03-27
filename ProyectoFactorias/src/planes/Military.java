@@ -5,7 +5,7 @@ import java.util.Objects;
 /**
  * Clase POJO de aviones militares
  */
-public class Military extends Plane {
+public abstract class Military extends Plane {
 	//Attributes
 	private String type; //Cargo, fighter, Air refueler, etc...
 	private boolean guns; 
@@ -58,6 +58,13 @@ public class Military extends Plane {
 			return false;
 		Military other = (Military) obj;
 		return flares == other.flares && guns == other.guns && Objects.equals(type, other.type);
+	}
+
+	@Override
+	public void setExtras(boolean extraA, boolean extraB) {
+		setGuns(extraA);
+		setFlares(extraB);
+		
 	}
 	
 	

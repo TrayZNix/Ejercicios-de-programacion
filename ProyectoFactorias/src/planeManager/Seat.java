@@ -8,6 +8,7 @@ public class Seat implements Comparable<Seat>{
 	private boolean windowPlaced;
 	private boolean extras;
 	private String seatNumber;
+	private boolean used;
 	//Constructor
 	public Seat(double price, boolean windowPlaced, boolean extras, String seatNumber) {
 		super();
@@ -15,6 +16,7 @@ public class Seat implements Comparable<Seat>{
 		this.windowPlaced = windowPlaced;
 		this.extras = extras;
 		this.seatNumber = seatNumber;
+		this.used = false;
 	}
 	public double getPrice() {
 		return price;
@@ -40,6 +42,12 @@ public class Seat implements Comparable<Seat>{
 	public void setSeatNumber(String seatNumber) {
 		this.seatNumber = seatNumber;
 	}
+	public boolean isUsed() {
+		return used;
+	}
+	public void setUsed(boolean used) {
+		this.used = used;
+	}
 	@Override
 	public String toString() {
 		String info = "";
@@ -59,7 +67,7 @@ public class Seat implements Comparable<Seat>{
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(extras, price, seatNumber, windowPlaced);
+		return Objects.hash(extras, price, seatNumber, used, windowPlaced);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -71,7 +79,8 @@ public class Seat implements Comparable<Seat>{
 			return false;
 		Seat other = (Seat) obj;
 		return extras == other.extras && Double.doubleToLongBits(price) == Double.doubleToLongBits(other.price)
-				&& Objects.equals(seatNumber, other.seatNumber) && windowPlaced == other.windowPlaced;
+				&& Objects.equals(seatNumber, other.seatNumber) && used == other.used
+				&& windowPlaced == other.windowPlaced;
 	}
 	@Override
 	public int compareTo(Seat o) {
