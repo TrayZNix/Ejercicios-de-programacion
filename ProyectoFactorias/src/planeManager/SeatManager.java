@@ -33,15 +33,15 @@ public class SeatManager {
 	public List<Airliner> sellSeat(Boolean window) {
 		utility.Printer printer = new Printer();
 		Seat s;
-		int removeNegOffset = -1;
+		int removeNegOffset = -1, strSize = 3;
 		int i = 0, j = 0;
 		boolean loop = false;
 		seats = this.pl.getSeats();
 		do {
-			IntStream rowInt = new Random().ints(1, seats.length).limit(1);
+			IntStream rowInt = new Random().ints(strSize, 1, seats.length).limit(1);
 			OptionalInt optIntRow = rowInt.findAny();
 			i = optIntRow.getAsInt();
-			IntStream colInt = new Random().ints(1, seats[i].length).limit(2);
+			IntStream colInt = new Random().ints(strSize, 1, seats[i].length).limit(2);
 			OptionalInt optIntCol = colInt.findAny();
 			j = optIntCol.getAsInt();
 			s = seats[i][j];

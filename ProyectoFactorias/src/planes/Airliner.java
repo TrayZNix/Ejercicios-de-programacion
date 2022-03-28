@@ -80,7 +80,7 @@ public abstract class Airliner extends Plane {
 	//Methods
 	public void setupSeats() {
 		boolean window, extras = false;
-		int removeOffset = 1;
+		int removeOffset = 1, seatmapPartitioner = 5, strSize = 3, minPrice = 75, maxPrice = 175;
 		for(int i = 0; i < this.seats.length; i++) {
 			for(int j = 0; j < this.seats[i].length; j++) {
 				if(j == 0 || j == this.seats[i].length-1) {
@@ -89,13 +89,13 @@ public abstract class Airliner extends Plane {
 				else {
 					window = false;
 				}
-				if( i < this.seats.length/5 ) {
+				if( i < this.seats.length/seatmapPartitioner ) {
 					extras = true;
 				}
 				else {
 					extras = false;
 				}
-				DoubleStream doubles = new Random().doubles(75, 175).limit(1); 
+				DoubleStream doubles = new Random().doubles(strSize, minPrice, maxPrice); 
 				OptionalDouble od = doubles.findFirst();
 				Double d = od.getAsDouble();
 				planeManager.Seat s = new Seat(d, window, extras, String.valueOf(i+removeOffset)+(char)(j+65) );
